@@ -53,4 +53,4 @@ Now visit [[http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/](http://1
 Hi, I'm Venkatesh Reddy. I developed this project to demonstrate my skills in authentication, API design, and user-specific data handling.
 If you need any further information or assistance, feel free to contact me.
 
-- Reach me at: kvenkateshreddydataengineer@gmail.com
+- Reach me at: kvenkyreddy113@gmail.com

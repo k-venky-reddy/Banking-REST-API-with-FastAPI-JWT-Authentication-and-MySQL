@@ -1,7 +1,3 @@
-#############################
-# Bank REST API – FastAPI   #
-# One‑file teaching sample   #
-#############################
 """
 Run locally (MySQL):
     $ python -m venv venv && source venv/bin/activate
@@ -24,9 +20,8 @@ from pydantic import BaseModel, EmailStr, Field
 from sqlalchemy import Column, DateTime, Float, ForeignKey, Integer, String, create_engine, select
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column, relationship, sessionmaker
 
-#############################
-# Config & Database         #
-#############################
+# Config & Database         
+
 SECRET_KEY = os.getenv("SECRET_KEY", "supersecret")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
@@ -43,9 +38,7 @@ class Base(DeclarativeBase):
     pass
 
 
-#############################
-# Models                    #
-#############################
+# Models                    
 class User(Base):
     __tablename__ = "users"
 
@@ -83,7 +76,7 @@ class Transaction(Base):
     type: Mapped[str] = mapped_column(String(8))  # DEPOSIT / WITHDRAW
     timestamp: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
-    # 🔑  Important: ondelete="CASCADE"  (and NOT NULL remains)
+    # Important: ondelete="CASCADE"  (and NOT NULL remains)
     account_id: Mapped[int] = mapped_column(
         ForeignKey("accounts.id", ondelete="CASCADE"), nullable=False
     )

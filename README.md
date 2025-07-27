@@ -22,7 +22,7 @@ This is a FastAPI-based RESTful Bank API that supports secure user registration,
 7. MySQL Database  
 
 ---
-## My SQL Data Base
+## My SQL DataBase
 ```bash
 CREATE DATABASE BANK;
 use BANK;

@@ -22,8 +22,8 @@ This is a FastAPI-based RESTful Bank API that supports secure user registration,
 7. MySQL Database  
 
 ---
-My SQL Data Base
---
+## My SQL Data Base
+```bash
 CREATE DATABASE BANK;
 use BANK;
 CREATE USER 'bankuser'@'localhost' IDENTIFIED BY 'BankPass123';
@@ -31,7 +31,7 @@ GRANT ALL PRIVILEGES ON BANK.* TO 'bankuser'@'localhost';
 
 ALTER USER 'bankuser'@'localhost' IDENTIFIED WITH mysql_native_password BY 'BankPass123';
 FLUSH PRIVILEGES;
---
+```
 ## Setup Instructions
 ### 1️. Clone the Repository
 ```bash

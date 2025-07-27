@@ -1,5 +1,4 @@
 # Banking-REST-API-with-FastAPI-JWT-Authentication-and-MySQL
-# Django_Admin_Portal
 
 ## Project Description:
 This is a FastAPI-based RESTful Bank API that supports secure user registration, account management, and transaction handling. The system uses JWT authentication and MySQL for persistent storage. It's built as a single-file teaching sample and ideal for learning how to use FastAPI with modern tooling and best practices.
@@ -13,13 +12,6 @@ This is a FastAPI-based RESTful Bank API that supports secure user registration,
 6. Interactive Swagger UI at /docs with dark theme
 7. Healthcheck endpoint at /health
 ---
-Component	Technology
-Backend Framework	FastAPI
-ORM	SQLAlchemy 2.0
-Database	MySQL
-Auth	OAuth2 + JWT (via PyJWT)
-Hashing	Passlib (bcrypt)
-Validation	Pydantic + EmailValidator
 ## Tech Stack:
 1. Python 3.13  
 2. Django 4.2  

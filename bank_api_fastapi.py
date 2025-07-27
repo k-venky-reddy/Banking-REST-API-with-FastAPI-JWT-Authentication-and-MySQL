@@ -92,9 +92,7 @@ class Transaction(Base):
 
 Base.metadata.create_all(engine)
 
-#############################
-# Schemas                   #
-#############################
+# Schemas                   
 class Token(BaseModel):
     access_token: str
     token_type: str = "bearer"
@@ -142,9 +140,8 @@ class TransactionOut(BaseModel):
         orm_mode = True
 
 
-#############################
-# Security Helpers          #
-#############################
+# Security Helpers          
+
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
 
@@ -164,9 +161,9 @@ def create_access_token(data: dict, expires_minutes: int = ACCESS_TOKEN_EXPIRE_M
     return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
 
-#############################
-# Dependencies              #
-#############################
+
+# Dependencies              
+
 def get_db():
     db = SessionLocal()
     try:
@@ -197,9 +194,8 @@ def get_current_user(
     return user
 
 
-#############################
-# FastAPI App & Routes      #
-#############################
+# FastAPI App & Routes      
+
 app = FastAPI(
     title="Bank API",
     description="Manage users, accounts, and transactions securely.",
@@ -353,9 +349,7 @@ def delete_transaction(
     return
 
 
-#############################
-# Healthcheck               #
-#############################
+# Healthcheck             
 @app.get("/health")
 def health():
     return {"status": "ok"}
